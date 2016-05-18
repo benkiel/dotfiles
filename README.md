@@ -62,7 +62,7 @@ If you run .type_tools, know that it needs the Java JDK installed for sfntly-py 
 
 Also, if you run .type_tools, know that it will create a ~/code folder to put everything in. Don't move this folder after doing so. Also, if you have a code folder with some of these things installed, I can only assume that bad things will happen. Be careful.
 
-To run simply type:
+To run simply type from the dotfiles/.intial_setup folder:
 
     ./.osx
     ./.type_tools
