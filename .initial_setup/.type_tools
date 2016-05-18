@@ -1,0 +1,378 @@
+#!/usr/bin/env bash
+
+# Install font development software on a new machine
+# This avoids using homebrew as much as possible, as I don't 
+# like it's opacity. However, for pkg-config, man I don't 
+# want to jump through that many GNU hoops, so I'm being
+# lazy. Don't tell my students.
+
+# some tricks from ~/.osx — https://mths.be/osx
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo -H` time stamp until `.osx` has finished
+while true; do sudo -H -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
+# install pip
+echo ""
+echo "Installing pip"
+curl https://bootstrap.pypa.io/get-pip.py | sudo -H python
+
+
+# install virtualenv
+echo ""
+echo "Installing virtualenv"
+sudo -H pip install virtualenv
+
+# install Hombebrew, sigh
+echo ""
+echo "Installing homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# install qt
+echo ""
+echo "Installing QT"
+brew install qt
+
+# install pkg-config to make freetype, harfbuzz, and ttfautohint happy
+echo ""
+echo "Install pkg-config"
+brew install pkg-config
+
+# install automake to make freetype, harfbuzz, and ttfautohint happy
+echo ""
+echo "Install automake"
+brew install automake
+
+# install autoconf to make freetype, harfbuzz, and ttfautohint happy
+echo ""
+echo "Install autoconf"
+brew install autoconf
+
+# install numpy
+echo ""
+echo "Install NumPy with pip"
+pip install numpy
+
+# Moving to ~/code. 
+# NOTE: If you have a ~/code folder with any of the following installed in it, big trouble will
+# happen. This script is for a new machine!
+echo ""
+echo "Checking for a code folder and moving there"
+sudo -H mkdir -p ~/code
+cd ~/code
+
+# install fonttools
+echo ""
+echo "Install fonttools"
+git clone https://github.com/behdad/fonttools.git
+cd fonttools
+sudo -H python setup.py develop
+cd ..
+
+# install robofab
+echo ""
+echo "Install roboFab"
+git clone https://github.com/robofab-developers/robofab.git
+cd robofab
+sudo -H python setup.py develop
+cd ..
+
+# install fontmath
+echo ""
+echo "Install fontMath"
+git clone https://github.com/typesupply/fontMath.git
+cd fontmath
+sudo -H python setup.py develop
+cd ..
+
+# install ufoLib
+echo ""
+echo "Install ufoLib"
+git clone https://github.com/unified-font-object/ufoLib.git
+cd ufolib
+sudo -H python setup.py develop
+cd ..
+
+# install defcon
+echo ""
+echo "Install defcon"
+git clone https://github.com/typesupply/defcon.git
+cd defcon
+sudo -H python setup.py develop
+cd ..
+
+# install extractor
+echo ""
+echo "Install extractor"
+git clone https://github.com/typesupply/extractor.git
+cd extractor
+sudo -H python setup.py develop
+cd ..
+
+# install feaTools
+echo ""
+echo "Install feaTools"
+git clone https://github.com/typesupply/feaTools.git
+cd feaTools
+sudo -H python setup.py develop
+cd ..
+
+# install vanilla
+echo ""
+echo "Install vanilla"
+git clone https://github.com/typesupply/vanilla.git
+cd vanilla
+sudo -H python setup.py develop
+cd ..
+
+# install feaPyFoFum
+echo ""
+echo "Install feaPyFoFum"
+git clone https://github.com/typesupply/feaPyFoFum.git
+cd feapyfofum
+sudo -H python setup.py develop
+cd ..
+
+# install ufo2fdk
+echo ""
+echo "Install ufo2fdk"
+git clone https://github.com/typesupply/ufo2fdk.git
+cd ufo2fdk
+sudo -H python setup.py develop
+cd ..
+
+# install compositor
+echo ""
+echo "Install compositor"
+git clone https://github.com/typesupply/compositor.git
+cd compositor
+sudo -H python setup.py develop
+cd ..
+
+# install ufo2svg
+echo ""
+echo "Install ufo2svg"
+git clone https://github.com/typesupply/ufo2svg.git
+cd ufo2svg
+sudo -H python setup.py develop
+cd ..
+
+# install woffTools
+echo ""
+echo "Install woffTools"
+git clone https://github.com/typesupply/woffTools.git
+cd wofftools
+sudo -H python setup.py develop
+cd ..
+
+# install defconAppKit
+echo ""
+echo "Install defconAppKit"
+git clone https://github.com/typesupply/defconAppKit.git
+cd defconappkit
+sudo -H python setup.py develop
+cd ..
+
+# install feaTools2
+echo ""
+echo "Install feaTools2"
+git clone https://github.com/typesupply/feaTools2.git
+cd featools2
+sudo -H python setup.py develop
+cd ..
+
+# install dialogkit
+echo ""
+echo "Install dialogkit"
+git clone https://github.com/typesupply/dialogKit.git
+cd dialogkit
+sudo -H python install.py
+cd ..
+
+# install fontAppTools
+echo ""
+echo "Install fontAppTools"
+git clone https://github.com/typesupply/fontAppTools.git
+cd fontapptools
+sudo -H python installer.py
+cd ..
+
+# install aicbTools
+echo ""
+echo "Install aicbTools"
+git clone https://github.com/typesupply/aicbTools.git
+cd aicbtools
+sudo -H python install.py
+cd ..
+
+# install brotili
+echo ""
+echo "Install brotli"
+git clone https://github.com/google/brotli.git
+cd brotli
+sudo -H python setup.py install
+cd ..
+
+# install ufoNormalizer
+echo ""
+echo "Install ufoNormalizer"
+git clone https://github.com/unified-font-object/ufoNormalizer.git
+cd ufoNormalizer
+sudo -H python setup.py develop
+cd ..
+
+# get the NormalizeAll command
+echo ""
+echo "Install normalizeAll command"
+git clone https://github.com/adobe-type-tools/shell-scripts.git normalizeAll
+sudo -H ln -s ~/code/normalizeAll/normalizeAll /usr/local/bin/normalizeAll
+
+# get a copy of the git Adobe fdk
+echo ""
+echo "Install the git Adobe FDK files"
+git clone https://github.com/adobe-type-tools/afdko.git FDK-git
+
+# install glyphNameFormatter
+echo ""
+echo "Install glyphNameFormatter"
+git clone https://github.com/LettError/glyphNameFormatter.git
+cd glyphNameFormatter
+sudo -H python setup.py install
+cd ..
+
+# install hTools
+echo ""
+echo "Install the hTools2"
+git clone https://github.com/gferreira/hTools2.git
+cd hTools2
+sudo -H python setup.py install
+cd ..
+
+# install freetype
+echo ""
+echo "Install freetype"
+curl -L -# http://downloads.sourceforge.net/project/freetype/freetype2/2.6.2/freetype-2.6.2.tar.gz > freetype-2.6.2.tar.gz
+tar -xf freetype-2.6.2.tar.gz
+rm freetype-2.6.2.tar.gz
+cd freetype-2.6.2
+./configure
+make
+sudo -H make install
+cd ..
+
+echo ""
+echo "Install harfbuzz"
+# install harfbuzz
+curl -L -# http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.1.3.tar.bz2 > harfbuzz-1.1.3.tar.bz2
+tar -xf harfbuzz-1.1.3.tar.bz2
+rm harfbuzz-1.1.3.tar.bz2
+cd harfbuzz-1.1.3
+./configure --with-glib=no
+make
+sudo -H make install
+cd ..
+cd freetype-2.6.2
+./configure
+make
+sudo -H make install
+cd ..
+
+echo ""
+echo "Install ttfautohint"
+# install ttfautohint with ttfautohintGUI
+curl -L -# http://sourceforge.net/projects/freetype/files/ttfautohint/1.5/ttfautohint-1.5.tar.gz > ttfautohint-1.5.tar.gz
+tar -xf ttfautohint-1.5.tar.gz
+rm ttfautohint-1.5.tar.gz
+cd ttfautohint-1.5
+./configure --with-doc=no
+make
+sudo -H make install
+cd .. 
+
+echo ""
+echo "Install ots"
+# install ots
+git clone https://github.com/khaledhosny/ots.git
+cd ots
+./autogen.sh
+./configure
+make
+sudo -H make install
+cd ..
+
+echo ""
+echo "Install snftly-py"
+# install in a sane way thatnks to Dalton Maag
+pip install --find-links https://github.com/daltonmaag/sfntly-py/releases/latest sfntly
+
+echo ""
+echo "Install fontparts in a virtualenv"
+# Things that need virtualenv (for now)	
+# install fontparts
+virtualenv fontparts
+cd fontparts
+source bin/activate
+pip install numpy
+mkdir source
+cd source
+git clone https://github.com/robofab-developers/fontParts.git
+git clone https://github.com/unified-font-object/ufoLib.git
+git clone https://github.com/typesupply/defcon.git -b ufo3
+git clone https://github.com/robofab-developers/robofab.git
+git clone https://github.com/behdad/fonttools.git
+git clone https://github.com/typesupply/fontMath.git -b ufo3
+cd fonttools
+python setup.py develop
+cd ../ufolib
+python setup.py develop
+cd ../robofab
+python setup.py develop
+cd ../fontmath
+python setup.py develop
+cd ../defcon
+python setup.py develop
+cd ../fontparts
+python setup.py develop
+cd ../../
+deactivate
+cd ..
+
+# install MutatorMath
+echo ""
+echo "Install MutatorMath in virtual env"
+virtualenv mutatorMath
+cd mutatorMath
+source bin/activate
+pip install numpy
+mkdir source
+cd source
+git clone https://github.com/LettError/MutatorMath.git
+cd MutatorMath
+sudo -H pip install -r requirements.txt
+cd ../../
+deactivate
+cd ..
+
+# install the pre-github fonttools
+echo ""
+echo "Install pre-github fonttools in a virtualenv"
+virtualenv fonttools_og
+cd fonttools_og
+source bin/activate
+pip install numpy
+mkdir source
+cd source
+git clone git://git.code.sf.net/p/fonttools/code fonttools
+cd fonttools
+python setup.py install
+cd ../../
+deactivate
+cd ..
+
+echo ""
+echo "Done"
+
+
+
