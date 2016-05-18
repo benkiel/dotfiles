@@ -89,6 +89,11 @@ cd fontmath
 sudo -H python setup.py develop
 cd ..
 
+# install booleanOperations
+echo ""
+echo "Install booleanOperations via pip"
+sudo -H pip install --find-links https://github.com/typemytype/booleanOperations/releases/latest booleanOperations
+
 # install ufoLib
 echo ""
 echo "Install ufoLib"
