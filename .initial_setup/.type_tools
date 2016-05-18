@@ -6,6 +6,8 @@
 # want to jump through that many GNU hoops, so I'm being
 # lazy. Don't tell my students.
 
+# If you want sfntly-py to work, you need to install the Java JDK
+
 # some tricks from ~/.osx — https://mths.be/osx
 # Ask for the administrator password upfront
 sudo -v
