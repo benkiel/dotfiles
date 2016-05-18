@@ -8,6 +8,7 @@ Currently there is one folder, [.inital_setup](https://github.com/benkiel/dotfil
 * [.type_tools](https://github.com/benkiel/dotfiles/blob/master/.initial_setup/.type_tools) downloads and installs the following code packages for working with type
   * [Adobe FDK](https://github.com/adobe-type-tools/afdko.git) — Note this does not install it, just grabs the code and puts it in a folder called fdk-git. I recommend downloading the fdk from the Adobe site and using that. This is for poking at the code, making fixes, and submitting pull requests to Adobe.
   * [aicbTools](https://github.com/typesupply/aicbTools.git)
+  * [booleanOperations](https://github.com/typemytype/booleanOperations)
   * [compositor](https://github.com/typesupply/compositor.git)
   * [defconAppKit](https://github.com/typesupply/defconAppKit.git)
   * [defcon](https://github.com/typesupply/defcon.git)
