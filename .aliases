@@ -1,0 +1,56 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias cd..="cd .."
+
+alias ls="ls -a"
+alias lsd='ls -l | grep "^d"' # only directories
+alias g="git"
+
+# mv, rm, cp
+alias mv='mv -v'
+alias rm='rm -i -v'
+alias cp='cp -v'
+
+# Shortcuts
+alias d="cd ~/Documents/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias c="cd ~/code"
+
+
+
+# Clear DNS cache
+
+alias clear-dns-cache="sudo dscacheutil -flushcache; \
+                       sudo killall -HUP mDNSResponder"
+
+# Empty the Trash on all mounted volumes and the main HDD. then clear the useless sleepimage
+alias emptytrash=" \
+    sudo rm -rfv /Volumes/*/.Trashes; \
+    rm -rfv ~/.Trash/*; \
+    sudo rm -v /private/var/vm/sleepimage; \
+    rm -rv \"/Users/paulirish/Library/Application Support/stremio/Cache\";  \
+    rm -rv \"/Users/paulirish/Library/Application Support/stremio/stremio-cache\" \
+"
+
+# Hide/Show hidden files in Finder
+
+alias hide-hidden-files="defaults write com.apple.finder AppleShowAllFiles -bool false \
+                            && killall Finder"
+
+alias show-hidden-files="defaults write com.apple.finder AppleShowAllFiles -bool true \
+                            && killall Finder"
+														
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+
+alias diskspace_report="df -P -kHl"
+alias free_diskspace_report="diskspace_report"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
+
+# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
+alias stfu="osascript -e 'set volume output muted true'"
+alias pumpitup="osascript -e 'set volume 7'"

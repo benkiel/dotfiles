@@ -2,10 +2,10 @@
 
 My dotfiles for setting up a new machine.
 
-Currently there is one folder, [.inital_setup](https://github.com/benkiel/dotfiles/tree/master/.initial_setup), with two files.
+Currently there is one folder, [initial_setup](https://github.com/benkiel/dotfiles/tree/master/initial_setup), with two files.
 
-* [.osx](https://github.com/benkiel/dotfiles/blob/master/.initial_setup/.osx) is a basic setup for OSX defaults, edited from https://mths.be/osx
-* [.type_tools](https://github.com/benkiel/dotfiles/blob/master/.initial_setup/.type_tools) downloads and installs the following code packages for working with type
+* [.osx](https://github.com/benkiel/dotfiles/blob/master/initial_setup/.osx) is a basic setup for OSX defaults, edited from https://mths.be/osx
+* [.type_tools](https://github.com/benkiel/dotfiles/blob/master/initial_setup/.type_tools) downloads and installs the following code packages for working with type
   * [Adobe FDK](https://github.com/adobe-type-tools/afdko.git) — Note this does not install it, just grabs the code and puts it in a folder called fdk-git. I recommend downloading the fdk from the Adobe site and using that. This is for poking at the code, making fixes, and submitting pull requests to Adobe.
   * [aicbTools](https://github.com/typesupply/aicbTools.git)
   * [booleanOperations](https://github.com/typemytype/booleanOperations)
