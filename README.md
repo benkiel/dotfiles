@@ -2,7 +2,7 @@
 
 My dotfiles for setting up a new machine.
 
-Currently there is one folder, [initial_setup](https://github.com/benkiel/dotfiles/tree/master/initial_setup), with two files.
+For setting up a machine, there is [initial_setup](https://github.com/benkiel/dotfiles/tree/master/initial_setup), with two files.
 
 * [.osx](https://github.com/benkiel/dotfiles/blob/master/initial_setup/.osx) is a basic setup for OSX defaults, edited from https://mths.be/osx
 * [.type_tools](https://github.com/benkiel/dotfiles/blob/master/initial_setup/.type_tools) downloads and installs the following code packages for working with type
@@ -49,6 +49,8 @@ Currently there is one folder, [initial_setup](https://github.com/benkiel/dotfil
   * QT
   * virtualenv
  
+Then there are an .aliases, .bash_profile, and .functions files that set some defaults (all taken largely from https://github.com/paulirish/dotfiles). symlink-setup.sh will set those up for you.
+
 
 ## To use
 
@@ -62,7 +64,7 @@ If you run .type_tools, know that it needs the Java JDK installed for sfntly-py 
 
 Also, if you run .type_tools, know that it will create a ~/code folder to put everything in. Don't move this folder after doing so. Also, if you have a code folder with some of these things installed, I can only assume that bad things will happen. Be careful.
 
-To run simply type from the dotfiles/.intial_setup folder:
+To run simply type from the dotfiles/initial_setup folder:
 
     ./.osx
     ./.type_tools
