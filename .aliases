@@ -3,7 +3,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias cd..="cd .."
 
-alias ls="ls -a"
+alias lsa="ls -a"
 alias lsd='ls -l | grep "^d"' # only directories
 alias g="git"
 
@@ -29,9 +29,7 @@ alias clear-dns-cache="sudo dscacheutil -flushcache; \
 alias emptytrash=" \
     sudo rm -rfv /Volumes/*/.Trashes; \
     rm -rfv ~/.Trash/*; \
-    sudo rm -v /private/var/vm/sleepimage; \
-    rm -rv \"/Users/paulirish/Library/Application Support/stremio/Cache\";  \
-    rm -rv \"/Users/paulirish/Library/Application Support/stremio/stremio-cache\" \
+    sudo rm -v /private/var/vm/sleepimage; \ \
 "
 
 # Hide/Show hidden files in Finder
