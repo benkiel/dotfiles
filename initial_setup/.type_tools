@@ -246,7 +246,7 @@ echo ""
 echo "Install glyphNameFormatter"
 git clone https://github.com/LettError/glyphNameFormatter.git
 cd glyphNameFormatter
-sudo -H python setup.py install
+sudo -H python setup.py develop
 cd ..
 
 # install hTools
