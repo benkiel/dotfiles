@@ -46,3 +46,8 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # ^ the only downside with this is [up] on the readline will go over all history not just this bash session.
 
 
+# Initialization for FDK command line tools.Tue May 24 16:45:14 2016
+FDK_EXE="/Users/benkiel/bin/FDK/Tools/osx"
+PATH=${PATH}:"/Users/benkiel/bin/FDK/Tools/osx"
+export PATH
+export FDK_EXE
