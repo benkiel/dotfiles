@@ -329,7 +329,7 @@ git clone https://github.com/unified-font-object/ufoLib.git
 git clone https://github.com/typesupply/defcon.git
 git clone https://github.com/robofab-developers/robofab.git
 git clone https://github.com/behdad/fonttools.git
-git clone https://github.com/typesupply/fontMath.git -b ufo3
+git clone https://github.com/typesupply/fontMath.git
 cd fonttools
 python setup.py develop
 cd ../ufolib
