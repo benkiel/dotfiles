@@ -1,5 +1,7 @@
 # dotfiles
 
+**Note: these are currently out of date!**
+
 My dotfiles for setting up a new machine.
 
 For setting up a machine, there is [initial_setup](https://github.com/benkiel/dotfiles/tree/master/initial_setup), with two files.
