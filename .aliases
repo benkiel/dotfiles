@@ -9,7 +9,7 @@ alias g="git"
 
 # mv, rm, cp
 alias mv='mv -v'
-alias rm='rm -i -v'
+alias rm='rm -v'
 alias cp='cp -v'
 
 # Shortcuts
@@ -17,8 +17,10 @@ alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias c="cd ~/code"
-
-
+alias work="cd /Volumes/Storage/Work_git"
+alias fpdoc="open /Users/benkiel/code/fontparts/source/fontParts/documentation/build/html/index.html"
+alias activate="source bin/activate"
+alias fdk="source ~/code/afdko_env/bin/activate"
 
 # Clear DNS cache
 

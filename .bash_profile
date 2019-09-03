@@ -51,3 +51,12 @@ FDK_EXE="/Users/benkiel/bin/FDK/Tools/osx"
 PATH=${PATH}:"/Users/benkiel/bin/FDK/Tools/osx"
 export PATH
 export FDK_EXE
+export EDITOR='subl -w'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+alias pip3="python3 -m pip"
+alias pytest3="python3 -m pytest"
